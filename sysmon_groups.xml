@@ -1,0 +1,218 @@
+<group name="windows,sysmon,">
+  <rule id="115974" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^1$</field>
+    <description>Sysmon - Event 1: Process creation</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_1,</group>
+  </rule>
+  <rule id="115975" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^2$</field>
+    <description>Sysmon - Event 2: A process changed a file creation time</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_2,</group>
+  </rule>
+  <rule id="115976" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^3$</field>
+    <description>Sysmon - Event 3: Network connection</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_3,</group>
+  </rule>
+  <rule id="115977" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^4$</field>
+    <description>Sysmon - Event 4: Sysmon service state changed</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_4,</group>
+  </rule>
+  <rule id="115978" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^5$</field>
+    <description>Sysmon - Event 5: Process terminated</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_5,</group>
+  </rule>
+  <rule id="115979" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^6$</field>
+    <description>Sysmon - Event 6: Driver loaded</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_6,</group>
+  </rule>
+  <rule id="115980" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^7$</field>
+    <description>Sysmon - Event 7: Image loaded</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_7,</group>
+  </rule>
+  <rule id="115981" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^8$</field>
+    <description>Sysmon - Event 8: CreateRemoteThread</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_8,</group>
+  </rule>
+  <rule id="115982" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^9$</field>
+    <description>Sysmon - Event 9: RawAccessRead</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_9,</group>
+  </rule>
+  <rule id="115983" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^10$</field>
+    <description>Sysmon - Event 10: ProcessAccess</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_10,</group>
+  </rule>
+  <rule id="115984" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^11$</field>
+    <description>Sysmon - Event 11: FileCreate</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_11,</group>
+  </rule>
+  <rule id="115985" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^12$</field>
+    <description>Sysmon - Event 12: RegistryEvent (Object create and delete)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_12,</group>
+  </rule>
+  <rule id="115986" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^13$</field>
+    <description>Sysmon - Event 13: RegistryEvent (Value Set)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_13,</group>
+  </rule>
+  <rule id="115987" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^14$</field>
+    <description>Sysmon - Event 14: RegistryEvent (Key and Value Rename)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_14,</group>
+  </rule>
+  <rule id="115988" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^15$</field>
+    <description>Sysmon - Event 15: FileCreateStreamHash</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_15,</group>
+  </rule>
+  <rule id="115989" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^16$</field>
+    <description>Sysmon - Event 16: ServiceConfigurationChange</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_16,</group>
+  </rule>
+  <rule id="115990" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^17$</field>
+    <description>Sysmon - Event 17: PipeEvent (Pipe Created)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_17,</group>
+  </rule>
+  <rule id="115991" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^18$</field>
+    <description>Sysmon - Event 18: PipeEvent (Pipe Connected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_18,</group>
+  </rule>
+  <rule id="115992" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^19$</field>
+    <description>Sysmon - Event 19: WmiEvent (WmiEventFilter activity detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_19,</group>
+  </rule>
+  <rule id="115993" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^20$</field>
+    <description>Sysmon - Event 20: WmiEvent (WmiEventConsumer activity detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_20,</group>
+  </rule>
+  <rule id="115994" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^21$</field>
+    <description>Sysmon - Event 21: WmiEvent (WmiEventConsumerToFilter activity detected)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_21,</group>
+  </rule>
+  <rule id="115995" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^22$</field>
+    <description>Sysmon - Event 22: DNSEvent (DNS query)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_22,</group>
+  </rule>
+  <rule id="115996" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^23$</field>
+    <description>Sysmon - Event 23: FileDelete (File Delete archived)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_23,</group>
+  </rule>
+  <rule id="115997" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^24$</field>
+    <description>Sysmon - Event 24: ClipboardChange (New content in the clipboard)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_24,</group>
+  </rule>
+  <rule id="115998" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^25$</field>
+    <description>Sysmon - Event 25: ProcessTampering (Process image change)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_25,</group>
+  </rule>
+  <rule id="115999" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^26$</field>
+    <description>Sysmon - Event 26: FileDeleteDetected (File Delete logged)</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_26,</group>
+  </rule>
+  <rule id="116000" level="0">
+    <if_sid>61600</if_sid>
+    <field name="win.system.providerName">^Microsoft-Windows-Sysmon$</field>
+    <field name="win.system.eventID">^255$</field>
+    <description>Sysmon - Event 255: Error</description>
+    <options>no_full_log</options>
+    <group>sysmon_event_255,</group>
+  </rule>
+</group>
