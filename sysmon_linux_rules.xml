@@ -1,0 +1,159 @@
+<!-- ############################################################################################################################## -->
+<!--          ==.               .=-                                                                                                 -->
+<!--         .===.              ===.                                                                                                -->
+<!--         =====.            =====                                                                                                -->
+<!--        :======.          ======:                                                                                               -->
+<!--        ========_________========                                                                                               -->
+<!--       -=========================-              __        __              _       _____      _                 _          _     -->
+<!--     .-===========================-.            \ \      / /_ _ _____   _| |__   | ____|_  _| |_ ___ _ __   __| | ___  __| |    -->
+<!--    -===============================-            \ \ /\ / / _` |_  / | | | '_ \  |  _| \ \/ / __/ _ \ '_ \ / _` |/ _ \/ _` |    -->
+<!--  .===================================:           \ V  V / (_| |/ /| |_| | | | | | |___ >  <| ||  __/ | | | (_| |  __/ (_| |    -->
+<!--   .-====. .-================: .=====:             \_/\_/ \__,_/___|\__,_|_| |_| |_____/_/\_\\__\___|_| |_|\__,_|\___|\__,_|    -->
+<!--     .-====: .-===========-. :====-.                                                                                            -->
+<!--        -====:  :=-   :=-. :====-.                                                                                              -->
+<!--          :====:   :=:   :====-.                                                                  By Daniil Pakhomov            -->
+<!--            :==========-====:                                                                     aka n00bsteam                 -->
+<!--              =============                                                                                                     -->
+<!--              .===========.                                                                                                     -->
+<!--               .=========.                                                                                                      -->
+<!--                :=======:                                                                                                       -->
+<!--                 :=====-                                                                                                        -->
+<!-- ############################################################################################################################## -->
+<!--
+1 Logs when a new process is created.
+3 Logs TCP/UDP connections on the machine
+4 Logs the state of the Sysmon service (started or stopped).
+5 Logs when a process terminates.
+9 Logs when a process conducts reading operations, from the drive.
+11 Logs when a file is created or overwritten.
+16 Logs when the local Sysmon configuration is updated.
+23 Logs when a file is deleted by a process.
+-->
+
+<group name="sysmon-linux,">
+    <rule id="118000" level="1">
+        <decoded_as>sysmon-linux</decoded_as>
+        <description>Sysmon Linux: Test Decoder</description>
+    </rule>
+    <rule id="118001" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^1$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) new process is created</description>
+        <options>no_full_log</options>
+    </rule>
+    <rule id="118002" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^2$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - RESERVED</description>
+    </rule>
+    <rule id="118003" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^3$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - TCP/UDP connections on the machine</description>
+        <options>no_full_log</options>
+    </rule>
+    <rule id="118004" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^4$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - state of the Sysmon service changed</description>
+    </rule>
+    <rule id="118005" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^5$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - process terminates</description>
+        <options>no_full_log</options>
+    </rule>
+    <rule id="118006" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^6$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118007" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^7$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118008" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^8$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118009" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^9$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - rocess conducts reading operations, from the drive</description>
+    </rule>
+    <rule id="118010" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^10$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118011" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^11$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - file is created or overwritten</description>
+        <options>no_full_log</options>
+    </rule>
+    <rule id="118012" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^12$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118013" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^13$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118014" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^14$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118015" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^15$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118016" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^16$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - Sysmon configuration is updated</description>
+    </rule>
+    <rule id="118017" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^17$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118018" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^18$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118019" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^19$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118020" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^20$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118021" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^21$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118022" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^22$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId)</description>
+    </rule>
+    <rule id="118023" level="1">
+        <if_sid>118000</if_sid>
+        <field name="system.eventId">^23$</field>
+        <description>Sysmon Linux: EventID - $(system.eventId) - file is deleted by a process</description>
+        <options>no_full_log</options>
+    </rule>
+
+</group>
