@@ -30,6 +30,6 @@ jobs:
         with:
           # discord webhook url without /github
           webhook: https://discord.com/api/webhooks/1100430263407886346/OmeIZVBvRNXtiCD4GBMltQpOsvdjHitDs4noxA7ZsVNB3g72Mmfs7OekptVkODuIOQtS
-          template: 'avatar-with-link'
-          include-extras: true
+          template: 'plain-author'
+          include-extras: false
 
